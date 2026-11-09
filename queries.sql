@@ -16,6 +16,28 @@ INSERT INTO employee_details VALUES
 (5,'Thabang','Forbes','0142250');
 select * from employee_details
 
+ALTER TABLE employee_details
+ADD Address VARCHAR(40);
+SELECT * FROM employee_details
+
+UPDATE employee_details
+SET Address = 'Mamelodi'
+WHERE first_name = 'Motsei';
+SELECT * FROM employee_details
+
+ALTER TABLE employee_details
+ALTER COLUMN Address TYPE char(30);
+SELECT * FROM employee_details
+
+DELETE FROM employee_details
+WHERE id_number = '0134554';
+SELECT * FROM employee_details
+
+SELECT * FROM employee_details
+WHERE id_number = '0120550';
+
+
+
 
 
 CREATE TYPE Gender as ENUM('Female','Male','Others');
